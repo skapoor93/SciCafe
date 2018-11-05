@@ -1,157 +1,207 @@
 alter table ATTENDEDBY 
-       drop 
-       foreign key FK4e6bfjm5v4taloyyiju9u3b2s;
 
-    alter table ATTENDEDBY 
-       drop 
-       foreign key FKfwo5twpk6803pvo812nt6yf2k;
+           drop 
 
-    alter table authorities 
-       drop 
-       foreign key FK7kj74d912rytfp5su91jfv0tg;
+           foreign key FK4e6bfjm5v4taloyyiju9u3b2s;
 
-    alter table authorities 
-       drop 
-       foreign key FKk91upmbueyim93v469wj7b2qh;
 
-    alter table DEPARTMENT 
-       drop 
-       foreign key FKk045s1ouh7h4bq4s7hy24ba38;
+        alter table ATTENDEDBY 
 
-    alter table EVENT_TAGS 
-       drop 
-       foreign key FKfnlg79bw8hyg86w67s4keeh31;
+           drop 
 
-    alter table EVENT_TAGS 
-       drop 
-       foreign key FK9ffeyc2nranbmh4vmshr6r5gh;
+           foreign key FKfwo5twpk6803pvo812nt6yf2k;
 
-    alter table EVENTS 
-       drop 
-       foreign key FK4xp8jrd41q9gncjkxi8jyvvux;
 
-    alter table ORGANIZATIONAL_UNIT 
-       drop 
-       foreign key FKdmf7b0g1nmrflixr4qw2oy5aj;
+        alter table authorities 
 
-    alter table PROGRAM_AFFILIATIONS 
-       drop 
-       foreign key FKpoca3a3v90pllvl7ru7sh8gkm;
+           drop 
 
-    alter table PROGRAM_AFFILIATIONS 
-       drop 
-       foreign key FK1lied0uohe2o8x9bssepb22dp;
+           foreign key FK7kj74d912rytfp5su91jfv0tg;
 
-    alter table QUALIFIED_EVENTS 
-       drop 
-       foreign key FK9qpuyrdkb59rq9tnw6hy5dinw;
 
-    alter table QUALIFIED_EVENTS 
-       drop 
-       foreign key FKbbtc33e0918ossfn4w8r88vwj;
+        alter table authorities 
 
-    alter table QUALIFIED_USERS 
-       drop 
-       foreign key FKhygtod4whnxtlho1nqu2o3gwa;
+           drop 
 
-    alter table QUALIFIED_USERS 
-       drop 
-       foreign key FKmp2ypxvrdms6ba9o16r9k49n0;
+           foreign key FKk91upmbueyim93v469wj7b2qh;
 
-    alter table REWARD_TAGS 
-       drop 
-       foreign key FK9cromsb9fnly4c6dq2tnjf1bh;
 
-    alter table REWARD_TAGS 
-       drop 
-       foreign key FKhc4t5p8hikilhq73p64cla3nd;
+        alter table EVENT_TAGS 
 
-    alter table REWARDS_BY_ORGANIZATION 
-       drop 
-       foreign key FKc4il6u7vthwpu63padfwcb1gx;
-       
-    alter table REWARDS_BY_ORGANIZATION 
-       drop 
-       foreign key FKird5gi9ycsuce87r70oysthm3;
+           drop 
 
-    alter table REWARDS_BY_USER 
-       drop 
-       foreign key FKnuqi8pvobv7djlr8k3h10u58c;
+           foreign key FKfnlg79bw8hyg86w67s4keeh31;
 
-    alter table REWARDS_BY_USER 
-       drop 
-       foreign key FKc0jlwtv4mp2nx670uu5tpkvk3;
 
-    alter table TITLE_OF_USER 
-       drop 
-       foreign key FK7chlqow56pgwx1tkkb5x8icmn;
+        alter table EVENT_TAGS 
 
-    alter table TITLE_OF_USER 
-       drop 
-       foreign key FKi08se4dgsnx0m9b3hqdx4j98g;
+           drop 
 
-    alter table USER_ORGANIZATION 
-       drop 
-       foreign key FKpjun7upgut3l6fkc73428glpi;
+           foreign key FK9ffeyc2nranbmh4vmshr6r5gh;
 
-    alter table USER_ORGANIZATION 
-       drop 
-       foreign key FKgxurdmdcnsw3ti31yitc02f61;
 
-    alter table USER_POSITION 
-       drop 
-       foreign key FKaitfxasvrauqf64f0hdf7ipfg;
+        alter table EVENTS 
 
-    alter table USER_POSITION 
-       drop 
-       foreign key FK35iiaohj3jvg1g9f3ap96to9s;
+           drop 
 
-    drop table if exists ATTENDEDBY;
+           foreign key FK4xp8jrd41q9gncjkxi8jyvvux;
 
-    drop table if exists authorities;
 
-    drop table if exists DEPARTMENT;
+        alter table PROGRAM_AFFILIATIONS 
 
-    drop table if exists EVENT_TAGS;
+           drop 
 
-    drop table if exists EVENTS;
+           foreign key FKpoca3a3v90pllvl7ru7sh8gkm;
 
-    drop table if exists hibernate_sequence;
 
-    drop table if exists ORGANIZATION;
+        alter table PROGRAM_AFFILIATIONS 
 
-    drop table if exists ORGANIZATIONAL_UNIT;
+           drop 
 
-    drop table if exists POSITION;
+           foreign key FK1lied0uohe2o8x9bssepb22dp;
 
-    drop table if exists PROGRAM_AFFILIATIONS;
 
-    drop table if exists PROGRAMS;
+        alter table QUALIFIED_EVENTS 
 
-    drop table if exists QUALIFIED_EVENTS;
+           drop 
 
-    drop table if exists QUALIFIED_USERS;
+           foreign key FK9qpuyrdkb59rq9tnw6hy5dinw;
 
-    drop table if exists REWARD_TAGS;
 
-    drop table if exists REWARDS;
+        alter table QUALIFIED_EVENTS 
 
-    drop table if exists REWARDS_BY_ORGANIZATION;
+           drop 
 
-    drop table if exists REWARDS_BY_USER;
+           foreign key FKbbtc33e0918ossfn4w8r88vwj;
 
-    drop table if exists roles;
 
-    drop table if exists TAGS;
+        alter table QUALIFIED_USERS 
 
-    drop table if exists TITLE_OF_USER;
+           drop 
 
-    drop table if exists USER_ORGANIZATION;
+           foreign key FKhygtod4whnxtlho1nqu2o3gwa;
 
-    drop table if exists USER_POSITION;
 
-    drop table if exists USER_TITLE;
+        alter table QUALIFIED_USERS 
 
-    drop table if exists users;
-    
-    commit;
+           drop 
+
+           foreign key FKmp2ypxvrdms6ba9o16r9k49n0;
+
+
+        alter table REWARD_TAGS 
+
+           drop 
+
+           foreign key FK9cromsb9fnly4c6dq2tnjf1bh;
+
+
+        alter table REWARD_TAGS 
+
+           drop 
+
+           foreign key FKhc4t5p8hikilhq73p64cla3nd;
+
+
+        alter table REWARDS_BY_USER 
+
+           drop 
+
+           foreign key FKnuqi8pvobv7djlr8k3h10u58c;
+
+
+        alter table REWARDS_BY_USER 
+
+           drop 
+
+           foreign key FKc0jlwtv4mp2nx670uu5tpkvk3;
+
+
+        alter table TITLE_OF_USER 
+
+           drop 
+
+           foreign key FK7chlqow56pgwx1tkkb5x8icmn;
+
+
+        alter table TITLE_OF_USER 
+
+           drop 
+
+           foreign key FKi08se4dgsnx0m9b3hqdx4j98g;
+
+
+        alter table USER_POSITION 
+
+           drop 
+
+           foreign key FKaitfxasvrauqf64f0hdf7ipfg;
+
+
+        alter table USER_POSITION 
+
+           drop 
+
+           foreign key FK35iiaohj3jvg1g9f3ap96to9s;
+
+
+        drop table if exists ATTENDEDBY;
+
+
+        drop table if exists authorities;
+
+
+        drop table if exists DEPARTMENT;
+
+
+        drop table if exists EVENT_TAGS;
+
+
+        drop table if exists EVENTS;
+
+
+        drop table if exists hibernate_sequence;
+
+
+        drop table if exists POSITION;
+
+
+        drop table if exists PROGRAM_AFFILIATIONS;
+
+
+        drop table if exists PROGRAMS;
+
+
+        drop table if exists QUALIFIED_EVENTS;
+
+
+        drop table if exists QUALIFIED_USERS;
+
+
+        drop table if exists REWARD_TAGS;
+
+
+        drop table if exists REWARDS;
+
+
+        drop table if exists REWARDS_BY_USER;
+
+
+        drop table if exists roles;
+
+
+        drop table if exists TAGS;
+
+
+        drop table if exists TITLE_OF_USER;
+
+
+        drop table if exists USER_POSITION;
+
+
+        drop table if exists USER_TITLE;
+
+
+        drop table if exists users;
+        
+        commit;

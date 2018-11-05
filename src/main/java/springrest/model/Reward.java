@@ -43,12 +43,6 @@ public class Reward implements Serializable{
 	inverseJoinColumns = @JoinColumn(name = "reward_id"))
 	private User providedBy;
 
-	@ManyToOne
-	@JoinTable(name = "REWARDS_BY_ORGANIZATION",
-	joinColumns = @JoinColumn(name = "organization_id"),
-	inverseJoinColumns = @JoinColumn(name = "reward_id"))
-	private Organization rewardProvider;
-
 	@Column(name = "APPROVED")
 	private boolean approved;
 
@@ -138,20 +132,6 @@ public class Reward implements Serializable{
 	 */
 	public void setApproved(boolean approved) {
 		this.approved = approved;
-	}
-
-	/**
-	 * @return the rewardProvider
-	 */
-	public Organization getRewardProvider() {
-		return rewardProvider;
-	}
-
-	/**
-	 * @param rewardProvider the rewardProvider to set
-	 */
-	public void setRewardProvider(Organization rewardProvider) {
-		this.rewardProvider = rewardProvider;
 	}
 
 	/**

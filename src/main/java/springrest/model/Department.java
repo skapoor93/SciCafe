@@ -6,8 +6,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /************************************************************
@@ -38,10 +36,6 @@ public class Department implements Serializable{
 
 	@Column(name = "DESCRIPTION")
 	private String description;
-
-	@ManyToOne
-	@JoinColumn(name = "ORGANIZATIONAL_UNIT_ID")
-	private OrganizationalUnit unit;
 
 	/**
 	 * @return the id
@@ -83,19 +77,5 @@ public class Department implements Serializable{
 	 */
 	public void setDescription(String description) {
 		this.description = description;
-	}
-
-	/**
-	 * @return the unit
-	 */
-	public OrganizationalUnit getUnit() {
-		return unit;
-	}
-
-	/**
-	 * @param unit the unit to set
-	 */
-	public void setUnit(OrganizationalUnit unit) {
-		this.unit = unit;
 	}
 }

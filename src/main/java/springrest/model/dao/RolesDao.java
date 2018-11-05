@@ -2,23 +2,18 @@ package springrest.model.dao;
 
 import java.util.List;
 
-import springrest.model.User;
+import springrest.model.Role;
 
 /***************************************************************
  * Interface for Users Data Acess Object for defining methods for 
- * CRUD operations to Users.
+ * CRUD operations to Roles.
  * 
  * @author shivam
  *
  **************************************************************/
-public interface UserDao {
+public interface RolesDao {
 
-    User getUser( Long id );
-
-    List<User> getUsers();
-
-    User saveUser( User user );
-    
-    List<User> getUserByUsername(String username);
-
+	Role saveRole(Role role);
+	
+	List<Role> getRoleByName(String name);
 }

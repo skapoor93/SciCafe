@@ -25,11 +25,11 @@ public class SchemaExport {
 		/*---------------------------------------------------------------
 		 * Commented out code to generate scripts for dropping the schema
          ----------------------------------------------------------------*/
-		//        properties.put( "javax.persistence.schema-generation.scripts.action",
-		//            "drop" );
-		//        properties.put(
-		//            "javax.persistence.schema-generation.scripts.drop-target",
-		//            stringWriter );
+//		        properties.put( "javax.persistence.schema-generation.scripts.action",
+//		            "drop" );
+//		        properties.put(
+//		            "javax.persistence.schema-generation.scripts.drop-target",
+//		            stringWriter );
 		
 		Persistence.generateSchema( "springrest", properties );
 

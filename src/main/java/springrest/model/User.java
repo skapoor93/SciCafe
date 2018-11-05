@@ -11,7 +11,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -51,7 +50,16 @@ public class User implements Serializable {
 
 	@Column(name = "EMAIL")
 	private String email;
-
+	
+	@Column(name = "TYPE")
+	private String userType;
+	
+	@Column(name = "UNIT")
+	private String organizationalUnit;
+	
+	@Column(name = "MAJOR")
+	private String major;
+	
 	@Column(nullable = false, name = "ENABLED")
 	private boolean enabled = true;
 
@@ -60,12 +68,6 @@ public class User implements Serializable {
 	joinColumns = @JoinColumn(name = "user_id"),
 	inverseJoinColumns = @JoinColumn(name = "role_id"))
 	Set<Role> roles;
-
-	@OneToMany
-	@JoinTable(name = "USER_ORGANIZATION",
-	joinColumns = @JoinColumn(name = "user_id"),
-	inverseJoinColumns = @JoinColumn(name = "organization_id"))
-	Set<Organization> organizationalUnit;
 
 	@ManyToMany
 	@JoinTable(name = "PROGRAM_AFFILIATIONS",
@@ -77,7 +79,6 @@ public class User implements Serializable {
 	{
 		roles = new HashSet<Role>();
 		programAffiliations = new HashSet<Program>();
-		organizationalUnit = new HashSet<Organization>();
 	}
 
 	public Long getId()
@@ -181,16 +182,44 @@ public class User implements Serializable {
 	}
 
 	/**
+	 * @return the userType
+	 */
+	public String getUserType() {
+		return userType;
+	}
+
+	/**
+	 * @param userType the userType to set
+	 */
+	public void setUserType(String userType) {
+		this.userType = userType;
+	}
+
+	/**
 	 * @return the organizationalUnit
 	 */
-	public Set<Organization> getOrganizationalUnit() {
+	public String getOrganizationalUnit() {
 		return organizationalUnit;
 	}
 
 	/**
 	 * @param organizationalUnit the organizationalUnit to set
 	 */
-	public void setOrganizationalUnit(Set<Organization> organizationalUnit) {
+	public void setOrganizationalUnit(String organizationalUnit) {
 		this.organizationalUnit = organizationalUnit;
+	}
+
+	/**
+	 * @return the major
+	 */
+	public String getMajor() {
+		return major;
+	}
+
+	/**
+	 * @param major the major to set
+	 */
+	public void setMajor(String major) {
+		this.major = major;
 	}
 }

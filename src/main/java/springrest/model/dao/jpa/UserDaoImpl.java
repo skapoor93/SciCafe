@@ -44,4 +44,10 @@ public class UserDaoImpl implements UserDao {
         return entityManager.merge( user );
     }
 
+	@Override
+	public List<User> getUserByUsername(String username) {
+		List<User> users=  entityManager.createQuery("select u from User u where u.username = :username").setParameter("username", username).getResultList();
+		return users;
+	}
+
 }

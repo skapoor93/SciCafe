@@ -1,24 +1,23 @@
-INSERT INTO `user_title`
-(`ID`,
-`TITLE_NAME`)
+INSERT INTO `users`
+(`id`,
+`EMAIL`,
+`ENABLED`,
+`FIRST_NAME`,
+`LAST_NAME`,
+`PASSWORD`,
+`USERNAME` , 
+`TYPE`,
+`UNIT`)
 VALUES
 (1,
-'Mr.');
-
-INSERT INTO `user_title`
-(`ID`,
-`TITLE_NAME`)
-VALUES
-(2,
-'Ms.');
-
-INSERT INTO `user_title`
-(`ID`,
-`TITLE_NAME`)
-VALUES
-(3,
-'Mrs.');
-
+"cysun@calstatela.edu",
+true,
+"cysun",
+"sun",
+"abcd",
+"cysun",
+"Faculty",
+"Dept. of Computer Science");
 
 INSERT INTO `users`
 (`id`,
@@ -27,32 +26,19 @@ INSERT INTO `users`
 `FIRST_NAME`,
 `LAST_NAME`,
 `PASSWORD`,
-`USERNAME`)
-VALUES
-(1,
-'cysun@calstatela.edu',
-true,
-'cysun',
-'sun',
-'abcd',
-'cysun');
-
-INSERT INTO `users`
-(`id`,
-`EMAIL`,
-`ENABLED`,
-`FIRST_NAME`,
-`LAST_NAME`,
-`PASSWORD`,
-`USERNAME`)
+`USERNAME`,
+`TYPE`,
+`MAJOR`)
 VALUES
 (2,
-'skapoor4@calstatela.edu',
+"skapoor4@calstatela.edu",
 true,
-'skapoor',
-'kapoor',
-'abcd',
-'skapoor');
+"shivam",
+"kapoor",
+"abcd",
+"skapoor",
+"STUDENT",
+"Computer Science");
 
 INSERT INTO `events`
 (`ID`,
@@ -65,12 +51,12 @@ INSERT INTO `events`
 `SUBMITTED_BY`)
 VALUES
 (1,
-'2018-09-30',
-'test',
-'robotics',
-'king hall',
+"2018-09-30",
+"test",
+"robotics",
+"king hall",
 true,
-'2018-09-27',
+"2018-09-27",
 1);
 
 INSERT INTO `events`
@@ -84,10 +70,19 @@ INSERT INTO `events`
 `SUBMITTED_BY`)
 VALUES
 (2,
-'2018-10-10',
-'abcd',
-'robots',
-'salazar hall',
+"2018-10-10",
+"abcd",
+"robots",
+"salazar hall",
 false,
-'2018-09-29',
+"2018-09-29",
 2);
+
+INSERT INTO `springrest`.`roles`
+(`id`,
+`name`)
+VALUES
+(1,
+"regular");
+
+commit;

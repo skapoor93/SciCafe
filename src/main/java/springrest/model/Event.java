@@ -15,6 +15,8 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 /************************************************************
  * Entity class for Events table,describing an event which is 
  * posted by a user. 
@@ -44,9 +46,11 @@ public class Event implements Serializable{
 	@Column(name = "DESCRIPTION")
 	private String eventDescription;
 
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "MM-dd-yyyy")
 	@Column(name = "START_TIME")
 	private Date startTime;
 
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "MM-dd-yyyy")
 	@Column(name = "END_TIME")
 	private Date endTime;
 

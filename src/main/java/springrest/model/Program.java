@@ -21,6 +21,8 @@ import javax.persistence.Table;
 @Table(name = "PROGRAMS")
 public class Program implements Serializable{
 
+	
+
 	/**
 	 * 
 	 */
@@ -31,7 +33,7 @@ public class Program implements Serializable{
 	@Column(name = "ID")
 	private Long id;
 
-	@Column(name = "NAME")
+	@Column(name = "NAME", unique = true, nullable = false)
 	private String programName;
 	
 	@Column(name = "FULL_NAME")
@@ -94,5 +96,14 @@ public class Program implements Serializable{
 	 */
 	public void setProgramFullName(String programFullName) {
 		this.programFullName = programFullName;
+	}
+	
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Program [id=" + id + ", programName=" + programName + ", programFullName=" + programFullName
+				+ ", programDescription=" + programDescription + "]";
 	}
 }
