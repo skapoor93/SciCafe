@@ -8,8 +8,7 @@
 6. Target students in Science GE courses and other introductory/gateway NSS and ECST courses
 7. Record affiliations (course, research program or other programs)
 8. Tracking: Sign-in at events
-9. Scan QR code, scan Cal State LA ID, others options?
-10. Rewards system
-11. Points for events/attendance/surveys
-12. Assessment surveys
-13. Rewards - Extra-credit for classes, Cal State LA gear, textbooks
+9. Rewards system
+10. Points for events/attendance/surveys
+11. Assessment surveys
+12. Rewards - Extra-credit for classes, Cal State LA gear, textbooks
